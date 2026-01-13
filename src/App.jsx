@@ -8,9 +8,17 @@ export default function App() {
     setTask([...task, { ...newTask, id: Date.now(), status: "waiting" }]);
   };
 
-  const updateTask = (id, newTask) => {};
+  const updateTask = (id, newStatus) => {
+    setTask(
+      task.map((customer) =>
+        customer.id === id ? { ...customer, status: newStatus } : customer
+      )
+    );
+  };
 
-  const deleteTask = (id) => {};
+  const deleteTask = (id) => {
+    setTask(task.filter((customer) => customer.id !== id));
+  };
 
   return (
     <div className="app">
