@@ -43,14 +43,14 @@ main {
   gap: 2rem;
 }
 
-.queue-form {
+.ticket-form {
   background: var(--surface);
   padding: 1.5rem;
   border-radius: 8px;
   height: fit-content;
 }
 
-.queue-form h2 {
+.ticket-form h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: var(--primary);
@@ -107,18 +107,18 @@ button:hover {
   opacity: 0.9;
 }
 
-.queue-display {
+.ticket-display {
   background: var(--surface);
   padding: 1.5rem;
   border-radius: 8px;
 }
 
-.queue-list {
+.ticket-list {
   display: grid;
   gap: 1rem;
 }
 
-.queue-item {
+.ticket-item {
   background: var(--background);
   padding: 1rem;
   border-radius: 4px;
@@ -164,7 +164,7 @@ button:hover {
   background: var(--error);
 }
 
-.empty-queue {
+.empty-ticket {
   text-align: center;
   color: var(--text-secondary);
 }
