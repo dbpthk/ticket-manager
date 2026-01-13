@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TicketForm from "./Components/TicketForm.jsx";
+import DisplayTickets from "./Components/DisplayTickets.jsx";
 
 export default function App() {
   const [task, setTask] = useState([]);
@@ -8,7 +9,7 @@ export default function App() {
     setTask([...task, { ...newTask, id: Date.now(), status: "waiting" }]);
   };
 
-  const updateTask = (id, newStatus) => {
+  const updateStatus = (id, newStatus) => {
     setTask(
       task.map((customer) =>
         customer.id === id ? { ...customer, status: newStatus } : customer
@@ -28,6 +29,11 @@ export default function App() {
       </header>
       <main>
         <TicketForm addTask={addTask} />
+        <DisplayTickets
+          tasks={task}
+          updateStatus={updateStatus}
+          deleteTask={deleteTask}
+        />
       </main>
     </div>
   );

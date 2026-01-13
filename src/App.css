@@ -152,7 +152,7 @@ button:hover {
   padding: 0.5rem 1rem;
 }
 
-.serve-btn {
+.start-btn {
   background: var(--success);
 }
 
@@ -160,7 +160,7 @@ button:hover {
   background: var(--info);
 }
 
-.remove-btn {
+.delete-btn {
   background: var(--error);
 }
 
